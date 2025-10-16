@@ -1,0 +1,134 @@
+.book-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  max-width: 460px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    sans-serif;
+}
+
+.book-card-content {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.book-card-left {
+  flex: 1;
+}
+
+.book-card-right {
+  flex-shrink: 0;
+}
+
+.book-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.book-author {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 12px 0;
+}
+
+.book-category {
+  display: inline-block;
+  background: #e5e7eb;
+  color: #4b5563;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+
+.star-filled {
+  color: #fbbf24;
+  font-size: 20px;
+}
+
+.star-empty {
+  color: #d1d5db;
+  font-size: 20px;
+}
+
+.rating-text {
+  font-size: 14px;
+  color: #6b7280;
+  margin-left: 6px;
+}
+
+.book-description {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.book-user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.user-icon {
+  font-size: 16px;
+}
+
+.user-name {
+  font-weight: 500;
+  color: #374151;
+}
+
+.book-date {
+  margin-left: auto;
+}
+
+.book-image {
+  width: 80px;
+  height: 112px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.book-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #e5e7eb;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .book-card {
+    padding: 16px;
+  }
+
+  .book-card-content {
+    flex-direction: column;
+  }
+
+  .book-image {
+    width: 100%;
+    height: 200px;
+  }
+}

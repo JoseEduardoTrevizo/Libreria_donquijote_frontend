@@ -1,0 +1,18 @@
+.eventos {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.title_evento {
+  color: #2b4c69;
+  margin: auto;
+  margin-top: 25px;
+  width: 350px;
+  font-size: 30px;
+}
+.subtitle_evento {
+  color: #2b4c69;
+  margin: auto;
+  margin-top: 10px;
+}

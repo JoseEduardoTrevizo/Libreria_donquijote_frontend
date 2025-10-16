@@ -1,0 +1,65 @@
+/*hero section*/
+.hero {
+  margin: 0;
+}
+.heroimg {
+  height: 525px;
+  width: 100%;
+}
+.hero_content {
+  position: relative;
+  height: 525px;
+}
+.eslogan {
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap;
+  color: #e7e7e7;
+  justify-content: flex-end;
+  margin: 0;
+  font-size: 55px;
+  width: 550px;
+  top: 45px;
+  right: 100px;
+}
+.eslogan strong {
+  color: #2b4c69;
+}
+.hero_content button {
+  position: absolute;
+  flex-wrap: wrap;
+  width: 400px;
+}
+
+.btn_explorar_evento {
+  position: absolute;
+  border: none;
+  border-radius: 7px;
+  max-width: 200px;
+  height: 45px;
+  top: 400px;
+  right: 100px;
+  background-color: rgb(59 130 246 / 0.8);
+}
+.btn_explorar_evento:hover {
+  background-color: rgb(59 130 246 / 1);
+  cursor: pointer;
+}
+.contact {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  bottom: 70px;
+  left: 230px;
+}
+.time_hero {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  bottom: 100px;
+  left: 230px;
+}
+.hero_img {
+  filter: invert(95%) sepia(0%) saturate(0%) hue-rotate(170deg) brightness(94%)
+    contrast(101%);
+}
