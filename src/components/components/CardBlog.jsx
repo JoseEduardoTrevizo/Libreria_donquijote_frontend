@@ -2,15 +2,15 @@ import React from "react";
 import donquijote from "../../../image/default_donquijote.png";
 
 export default function CardBlog({
-  titulo = "Cien años de soledad",
-  autor = "Gabriel García Márquez",
-  categoria = "Realismo Mágico",
-  calificacion = 5,
-  descripcion = "Una obra maestra que te transporta a Macondo. La narrativa de García Márquez es simplemente fascinante.",
-  nombreUsuario = "María González",
-  fecha = "14/1/2024",
-  imagenUrl = null,
+  nombre,
+  titulo,
+  autor,
+  categoria,
+  calificacion,
+  descripcion,
+  fecha,
 }) {
+  console.log("Calificación recibida en CardBlog:", nombre, calificacion);
   const renderStars = () => {
     return (
       <div className="stars">
@@ -29,28 +29,29 @@ export default function CardBlog({
 
   return (
     <div className="book-card">
-      <div className="book-card-content">
-        <div className="book-card-left">
+      <div className="book-card-header">
+        <div className="book-info">
           <h3 className="book-title">{titulo}</h3>
           <p className="book-author">por {autor}</p>
-
           <span className="book-category">{categoria}</span>
-
-          {renderStars()}
-
-          <p className="book-description">{descripcion}</p>
-
-          <div className="book-user-info">
-            <span className="user-icon">👤</span>
-            <span className="user-name">{nombreUsuario}</span>
-            <span className="book-date">{fecha}</span>
-          </div>
         </div>
 
-        <div className="book-card-right">
-          <div className="book-image">
-            <img src={donquijote} alt="Usuario" />
+        <div className="book-image">
+          <img src={donquijote} alt={titulo} />
+        </div>
+      </div>
+
+      <div className="book-rating">{renderStars()}</div>
+
+      <p className="book-description">{descripcion}</p>
+
+      <div className="book-card-footer">
+        <div className="book-user-info">
+          <div className="user-data">
+            <span className="user-icon">👤</span>
+            <span className="user-name">{nombre}</span>
           </div>
+          <span className="book-date">{fecha}</span>
         </div>
       </div>
     </div>
