@@ -23,7 +23,7 @@ export default function Blog({
           method: "GET",
           headers: { "Content-Type": "application/json" },
         }),
-        await new Promise((resolve) => setTimeout(resolve, 1000)), // Simula retardo
+        await new Promise((resolve) => setTimeout(resolve, 750)), // Simula retardo
       ]);
 
       if (!response.ok) {
