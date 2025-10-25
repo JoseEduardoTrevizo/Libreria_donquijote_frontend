@@ -28,30 +28,30 @@ export default function CardBlog({
   };
 
   return (
-    <div className="book-card">
-      <div className="book-card-header">
-        <div className="book-info">
-          <h3 className="book-title">{titulo}</h3>
-          <p className="book-author">por {autor}</p>
-          <span className="book-category">{categoria}</span>
+    <div className="blog-card">
+      <div className="blog-card-header">
+        <div className="blog-info">
+          <h3 className="blog-title">{titulo}</h3>
+          <p className="blog-author">por {autor}</p>
+          <span className="blog-category">{categoria}</span>
         </div>
 
-        <div className="book-image">
+        <div className="blog-image">
           <img src={donquijote} alt={titulo} />
         </div>
       </div>
 
-      <div className="book-rating">{renderStars()}</div>
+      <div className="blog-rating">{renderStars()}</div>
 
-      <p className="book-description">{descripcion}</p>
+      <p className="blog-description">{descripcion}</p>
 
-      <div className="book-card-footer">
-        <div className="book-user-info">
+      <div className="blog-card-footer">
+        <div className="blog-user-info">
           <div className="user-data">
             <span className="user-icon">👤</span>
             <span className="user-name">{nombre}</span>
           </div>
-          <span className="book-date">{fecha}</span>
+          <span className="blog-date">{fecha}</span>
         </div>
       </div>
     </div>

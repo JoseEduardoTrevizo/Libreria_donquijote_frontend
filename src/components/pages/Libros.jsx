@@ -1,4 +1,5 @@
 import React from "react";
+import BookCard from "../components/BookCard";
 
 export default function Libros() {
   return (
@@ -41,7 +42,20 @@ export default function Libros() {
         </div>
       </div>
 
-      <h2 className="titel_books">Soy los libros</h2>
+      <div className="container_books">
+        <BookCard />
+        <BookCard />
+        <BookCard />
+        <BookCard />
+        <BookCard />
+        <BookCard />
+        <BookCard />
+        <BookCard />
+        <BookCard />
+        <BookCard />
+        <BookCard />
+        <BookCard />
+      </div>
     </div>
   );
 }

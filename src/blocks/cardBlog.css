@@ -1,4 +1,4 @@
-.book-card {
+.blog-card {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto auto;
@@ -16,20 +16,20 @@
 }
 
 /* Header - Grid con 2 columnas */
-.book-card-header {
+.blog-card-header {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 20px;
   align-items: start;
 }
 
-.book-info {
+.blog-info {
   display: grid;
   grid-template-columns: 1fr;
   gap: 8px;
 }
 
-.book-title {
+.blog-title {
   font-size: 22px;
   font-weight: 600;
   color: #1a1a1a;
@@ -37,13 +37,13 @@
   line-height: 1.3;
 }
 
-.book-author {
+.blog-author {
   font-size: 14px;
   color: #6b7280;
   margin: 0;
 }
 
-.book-category {
+.blog-category {
   display: inline-block;
   background: #e5e7eb;
   color: #4b5563;
@@ -55,7 +55,7 @@
 }
 
 /* Imagen */
-.book-image {
+.blog-image {
   width: 80px;
   height: 112px;
   border-radius: 6px;
@@ -63,20 +63,20 @@
   grid-column: 2;
 }
 
-.book-image img {
+.blog-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.book-image-placeholder {
+.blog-image-placeholder {
   width: 100%;
   height: 100%;
   background: #e5e7eb;
 }
 
 /* Estrellas */
-.book-rating {
+.blog-rating {
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -106,7 +106,7 @@
 }
 
 /* Descripción */
-.book-description {
+.blog-description {
   font-size: 14px;
   height: 100px;
   color: #4b5563;
@@ -116,7 +116,7 @@
 }
 
 /* Footer - Grid con 3 columnas */
-.book-card-footer {
+.blog-card-footer {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 12px;
@@ -124,7 +124,7 @@
   border-top: 1px solid #e5e7eb;
 }
 /* Info de usuario - Grid con 2 columnas */
-.book-user-info {
+.blog-user-info {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 12px;
@@ -155,24 +155,24 @@
 
 /* Responsive */
 @media (max-width: 480px) {
-  .book-card {
+  .blog-card {
     padding: 16px;
     gap: 12px;
   }
 
-  .book-card-header {
+  .blog-card-header {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
   }
 
-  .book-image {
+  .blog-image {
     width: 100%;
     height: 200px;
     grid-column: 1;
     grid-row: 2;
   }
 
-  .book-card-footer {
+  .blog-card-footer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
   }

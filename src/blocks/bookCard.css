@@ -1,0 +1,63 @@
+.book-card {
+  width: 255px;
+  height: auto;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: grid;
+  padding: 15px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 16px;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.book-image-container {
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.book-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.book-title {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.book-author {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  color: #2196f3;
+  margin: 0 0 20px 0;
+  font-weight: 500;
+}
+
+.price-button {
+  color: #4caf50;
+  text-align: center;
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.price-button:active {
+  transform: scale(0.98);
+}

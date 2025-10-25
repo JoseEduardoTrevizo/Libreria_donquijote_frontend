@@ -1,5 +1,5 @@
 import React from "react";
-import donquijote from "../../../image/Lucid.jpg";
+import donquijote from "../../../image/Image_cardEvent.jpg";
 
 export default function EventCard({
   imageUrl = donquijote,
