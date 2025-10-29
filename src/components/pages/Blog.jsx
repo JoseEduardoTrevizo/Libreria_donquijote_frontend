@@ -3,51 +3,15 @@ import heroBlog from "../../../image/blog_hero.png";
 import Popup from "./popup";
 import CardBlog from "../components/CardBlog";
 import { useEffect, useState } from "react";
+import CurrentContext from "../../Context/CurrentContext";
 
 export default function Blog({
   onAddRecomendation,
   isOpen,
   onCloseRecomendation,
 }) {
-  const [recomendaciones, setRecomendaciones] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  // Función para obtener recomendaciones
-  const getRecomendaciones = async () => {
-    try {
-      setLoading(true);
-      // IMPORTANTE: Cambia esto a tu URL de backend real
-      const [response] = await Promise.all([
-        fetch("http://localhost:5173/blog/recomendaciones", {
-          method: "GET",
-          headers: { "Content-Type": "application/json" },
-        }),
-        await new Promise((resolve) => setTimeout(resolve, 750)), // Simula retardo
-      ]);
-
-      if (!response.ok) {
-        throw new Error(`Error ${response.status}: ${response.statusText}`);
-      }
-
-      const data = await response.json();
-      console.log("Datos obtenidos:", data);
-
-      setRecomendaciones(data.entradas || []);
-      setError(null);
-      console.log(data);
-    } catch (error) {
-      console.error("Error:", error);
-      setError(error.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  // Cargar datos al montar el componente
-  useEffect(() => {
-    getRecomendaciones();
-  }, []);
+  const { recomendaciones, loading, error, getRecomendaciones } =
+    React.useContext(CurrentContext);
 
   return (
     <div className="blog">

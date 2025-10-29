@@ -8,7 +8,6 @@ import Blog from "../components/pages/Blog";
 import Contacto from "../components/pages/Contacto";
 import Admin from "../components/pages/Admin";
 import Footer from "../components/layout/Footer";
-import Popup from "../components/pages/popup";
 
 export default function Rutas({
   isOpen,

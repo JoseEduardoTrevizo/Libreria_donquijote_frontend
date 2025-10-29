@@ -2,6 +2,7 @@ import React from "react";
 import EventCard from "../components/EventCard";
 import { useEffect, useState } from "react";
 import Quijote_sin_eventos from "../../../image/quijote_eventos.png";
+import CurrentContext from "../../Context/CurrentContext";
 
 export default function Eventos() {
   const [eventos, setEventos] = useState([]);
@@ -40,41 +41,43 @@ export default function Eventos() {
   }, []);
 
   return (
-    <div className="eventos">
-      <h2 className="title_evento">Todos nuestros eventos</h2>
-      <p className="subtitle_evento">
-        Descubre todas nuestras actividades literarias, talleres.
-      </p>
+    <CurrentContext.Provider value={{ eventos, loading, error, getEventos }}>
+      <div className="eventos">
+        <h2 className="title_evento">Todos nuestros eventos</h2>
+        <p className="subtitle_evento">
+          Descubre todas nuestras actividades literarias, talleres.
+        </p>
 
-      {/* Estado de carga */}
-      {loading && (
-        <div className="loading-container">
+        {/* Estado de carga */}
+        {loading && (
+          <div className="loading-container">
+            <p>Cargando eventos...</p>
+          </div>
+        )}
+
+        {loading ? (
           <p>Cargando eventos...</p>
-        </div>
-      )}
-
-      {loading ? (
-        <p>Cargando eventos...</p>
-      ) : (
-        <div className="eventos_container">
-          {eventos.length > 0 ? (
-            eventos.map((evento) => (
-              <EventCard
-                key={evento._id}
-                titulo={evento.titulo}
-                fecha={evento.fecha}
-                descripcion={evento.descripcion}
-                hora={evento.hora}
-                lugar={evento.lugar}
-              />
-            ))
-          ) : (
-            <div className="no-events">
-              <img src={Quijote_sin_eventos} alt="No hay eventos" />
-            </div>
-          )}
-        </div>
-      )}
-    </div>
+        ) : (
+          <div className="eventos_container">
+            {eventos.length > 0 ? (
+              eventos.map((evento) => (
+                <EventCard
+                  key={evento._id}
+                  titulo={evento.titulo}
+                  fecha={evento.fecha}
+                  descripcion={evento.descripcion}
+                  hora={evento.hora}
+                  lugar={evento.lugar}
+                />
+              ))
+            ) : (
+              <div className="no-events">
+                <img src={Quijote_sin_eventos} alt="No hay eventos" />
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </CurrentContext.Provider>
   );
 }

@@ -1,9 +1,16 @@
-import React from "react";
+import React, { use } from "react";
+import { useEffect } from "react";
 import don_quijote from "../../../image/don_quijote.jpeg";
 import clock from "../../../image/clock.svg";
 import pin from "../../../image/pin.svg";
-import Card from "../layout/Card";
+import quote from "../../../image/comma.svg";
+import BookCard from "../components/BookCard";
+import { useContext } from "react";
+import CurrentContext from "../../Context/CurrentContext";
+import CardBlog from "../components/CardBlog";
+
 export default function Inicio() {
+  const { recomendaciones = [], loading } = useContext(CurrentContext);
   return (
     <div>
       <section className="hero">
@@ -34,8 +41,109 @@ export default function Inicio() {
         </div>
 
         <div className="container_card">
-          <Card />
+          <div className="cardContainer_books">
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+          </div>
           <button className="btn_recien_llegados">Ver Todo el Catalogo</button>
+        </div>
+      </section>
+
+      <section className="blog_inicio">
+        <div className="container_titles">
+          <h2 className="blog_inicio title">Nuestra Comunidad</h2>
+          <p className="blog_inicio subtitle">
+            Únete a nuestra comunidad lectora y dejanos tus recomendaciones
+          </p>
+        </div>
+
+        <div className="container_card">
+          <div className="cardContainer_events">
+            {recomendaciones.slice(0, 4).map((rec) => (
+              <CardBlog
+                key={rec._id}
+                titulo={rec.titulo}
+                autor={rec.autor}
+                categoria={rec.categoria}
+                calificacion={rec.calificacion}
+                descripcion={rec.descripcion}
+                nombre={rec.nombre}
+                fecha={new Date().toLocaleDateString("es-MX")}
+              />
+            ))}
+          </div>
+          <button className="btn_blog_inicio">Ver Todo el Catalogo</button>
+        </div>
+      </section>
+
+      <section className="testimonios">
+        <div className="container_titles">
+          <h2 className="testimonios_inicio title">
+            Lo que Dicen Nuestros Lectores
+          </h2>
+          <p className="testimonios_inicio subtitle">
+            Testimonios reales de nuestra comunidad de amantes de los libros
+          </p>
+        </div>
+        <div className="container_testimonios">
+          <div className="testimonial-card">
+            <div className="quote-icon">
+              <img src={quote} alt="quote" />
+              <img src={quote} alt="quote" />
+            </div>
+            <div className="stars">
+              <span className="star">★</span>
+              <span className="star">★</span>
+              <span className="star">★</span>
+              <span className="star">★</span>
+              <span className="star">★</span>
+            </div>
+            <p className="testimonial-text">
+              "El equipo conoce cada libro de memoria. Su pasión por la
+              literatura es contagiosa y siempre me ayudan a encontrar material
+              perfecto para mis clases."
+            </p>
+          </div>
+
+          <div className="testimonial-card">
+            <div className="quote-icon">
+              <img src={quote} alt="quote" />
+              <img src={quote} alt="quote" />
+            </div>
+            <div className="stars">
+              <span className="star">★</span>
+              <span className="star">★</span>
+              <span className="star">★</span>
+              <span className="star">★</span>
+              <span className="star">★</span>
+            </div>
+            <p className="testimonial-text">
+              "Esta librería es un tesoro escondido. Siempre encuentro
+              recomendaciones perfectas y el ambiente es increíblemente
+              acogedor. Los eventos literarios son excepcionales."
+            </p>
+          </div>
+
+          <div className="testimonial-card">
+            <div className="quote-icon">
+              <img src={quote} alt="quote" />
+              <img src={quote} alt="quote" />
+            </div>
+            <div className="stars">
+              <span className="star">★</span>
+              <span className="star">★</span>
+              <span className="star">★</span>
+              <span className="star">★</span>
+              <span className="star">★</span>
+            </div>
+            <p className="testimonial-text">
+              "Un lugar mágico donde los libros cobran vida. Los talleres de
+              escritura me han ayudado enormemente en mi carrera. Recomiendo
+              totalmente sus actividades."
+            </p>
+          </div>
         </div>
       </section>
     </div>
