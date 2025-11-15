@@ -10,7 +10,7 @@ import CurrentContext from "../../Context/CurrentContext";
 import CardBlog from "../components/CardBlog";
 
 export default function Inicio() {
-  const { recomendaciones = [], loading } = useContext(CurrentContext);
+  const { books, recomendaciones = [], loading } = useContext(CurrentContext);
   return (
     <div>
       <section className="hero">
@@ -42,10 +42,9 @@ export default function Inicio() {
 
         <div className="container_card">
           <div className="cardContainer_books">
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
+            {books.slice(0, 4).map((book) => (
+              <BookCard key={book._id} books={book} />
+            ))}
           </div>
           <button className="btn_recien_llegados">Ver Todo el Catalogo</button>
         </div>
