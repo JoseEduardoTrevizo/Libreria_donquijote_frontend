@@ -1,12 +1,11 @@
 import React from "react";
 import assassinsCreedImage from "../../../image/secret-crusade.webp";
-
-export default function BookCard() {
+export default function BookCard({ books }) {
   const book = {
-    image: assassinsCreedImage,
-    title: "Assassin's Creed. Brotherhood",
-    author: "Oliver Bowden",
-    price: "$349.00",
+    title: books.titulo || "Título Desconocido",
+    author: books.autor || "Autor Desconocido",
+    price: books.precio || "Precio no disponible",
+    image: books.imagen,
   };
 
   return (

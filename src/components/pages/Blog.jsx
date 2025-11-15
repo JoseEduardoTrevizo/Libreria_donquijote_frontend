@@ -2,7 +2,6 @@ import React from "react";
 import heroBlog from "../../../image/blog_hero.png";
 import Popup from "./popup";
 import CardBlog from "../components/CardBlog";
-import { useEffect, useState } from "react";
 import CurrentContext from "../../Context/CurrentContext";
 
 export default function Blog({

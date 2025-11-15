@@ -93,12 +93,12 @@ export default function Inicio() {
               <img src={quote} alt="quote" />
               <img src={quote} alt="quote" />
             </div>
-            <div className="stars">
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
+            <div className="stars_quote">
+              <span className="star_quote">★</span>
+              <span className="star_quote">★</span>
+              <span className="star_quote">★</span>
+              <span className="star_quote">★</span>
+              <span className="star_quote">★</span>
             </div>
             <p className="testimonial-text">
               "El equipo conoce cada libro de memoria. Su pasión por la
@@ -112,12 +112,12 @@ export default function Inicio() {
               <img src={quote} alt="quote" />
               <img src={quote} alt="quote" />
             </div>
-            <div className="stars">
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
+            <div className="stars_quote">
+              <span className="star_quote">★</span>
+              <span className="star_quote">★</span>
+              <span className="star_quote">★</span>
+              <span className="star_quote">★</span>
+              <span className="star_quote">★</span>
             </div>
             <p className="testimonial-text">
               "Esta librería es un tesoro escondido. Siempre encuentro
@@ -131,12 +131,12 @@ export default function Inicio() {
               <img src={quote} alt="quote" />
               <img src={quote} alt="quote" />
             </div>
-            <div className="stars">
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
+            <div className="stars_quote">
+              <span className="star_quote">★</span>
+              <span className="star_quote">★</span>
+              <span className="star_quote">★</span>
+              <span className="star_quote">★</span>
+              <span className="star_quote">★</span>
             </div>
             <p className="testimonial-text">
               "Un lugar mágico donde los libros cobran vida. Los talleres de

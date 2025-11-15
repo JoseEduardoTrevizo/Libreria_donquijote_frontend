@@ -1,7 +1,9 @@
 import React from "react";
 import BookCard from "../components/BookCard";
+import CurrentContext from "../../Context/CurrentContext";
 
 export default function Libros() {
+  const { books } = React.useContext(CurrentContext);
   return (
     <div className="catalogo">
       <h2 className="titel_books">Catálogo de Libros</h2>
@@ -43,18 +45,9 @@ export default function Libros() {
       </div>
 
       <div className="container_books">
-        <BookCard />
-        <BookCard />
-        <BookCard />
-        <BookCard />
-        <BookCard />
-        <BookCard />
-        <BookCard />
-        <BookCard />
-        <BookCard />
-        <BookCard />
-        <BookCard />
-        <BookCard />
+        {books.map((book) => (
+          <BookCard key={book._id} books={book} />
+        ))}
       </div>
     </div>
   );

@@ -10,7 +10,12 @@ function App() {
   const [recomendaciones, setRecomendaciones] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [books, setBooks] = useState([]);
 
+  useEffect(() => {
+    getRecomendaciones();
+    getBooks();
+  }, []);
   // Función para obtener recomendaciones
   const getRecomendaciones = async () => {
     try {
@@ -29,11 +34,9 @@ function App() {
       }
 
       const data = await response.json();
-      console.log("Datos obtenidos:", data);
 
       setRecomendaciones(data.entradas || []);
       setError(null);
-      console.log(data);
     } catch (error) {
       console.error("Error:", error);
       setError(error.message);
@@ -41,9 +44,33 @@ function App() {
       setLoading(false);
     }
   };
-  useEffect(() => {
-    getRecomendaciones();
-  }, []);
+
+  const getBooks = async () => {
+    try {
+      setLoading(true);
+      // IMPORTANTE: Cambia esto a tu URL de backend real
+      const [response] = await Promise.all([
+        fetch("http://localhost:5173/books/libros", {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+        }),
+        await new Promise((resolve) => setTimeout(resolve, 750)), // Simula retardo
+      ]);
+
+      if (!response.ok) {
+        throw new Error(`Error ${response.status}: ${response.statusText}`);
+      }
+
+      const dataBooks = await response.json();
+      setBooks(dataBooks.libros || []);
+      setError(null);
+    } catch (error) {
+      console.error("Error:", error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleAddRecomendation = () => {
     setIsPopupOpenRecommendation(true);
@@ -57,6 +84,8 @@ function App() {
     loading,
     error,
     getRecomendaciones,
+    books,
+    getBooks,
   };
   return (
     <>

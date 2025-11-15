@@ -77,7 +77,7 @@
   margin-bottom: 16px;
 }
 
-.stars {
+.stars_quote {
   position: absolute;
   top: 32px;
   right: 32px;
@@ -85,7 +85,7 @@
   gap: 4px;
 }
 
-.star {
+.star_quote {
   color: #4a90e2;
   font-size: 20px;
 }
