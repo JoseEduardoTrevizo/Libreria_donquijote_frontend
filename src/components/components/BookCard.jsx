@@ -12,7 +12,11 @@ export default function BookCard({ books }) {
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 p-8">
       <div className="book-card">
         <div className="book-image-container">
-          <img src={book.image} alt={book.title} className="book-image" />
+          <img
+            src={`http://localhost:5173/books/imagen/${book.image}`}
+            alt={book.title}
+            className="book-image"
+          />
         </div>
 
         <div className="book-content">
