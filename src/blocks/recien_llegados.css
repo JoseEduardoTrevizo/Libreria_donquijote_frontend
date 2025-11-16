@@ -40,6 +40,10 @@
     hsl(209 40% 50%) 100%
   );
 }
+.btn_recien_llegados,
+.btn_blog_inicio:hover {
+  cursor: pointer;
+}
 .cardContainer_books,
 .cardContainer_events {
   width: 100%;

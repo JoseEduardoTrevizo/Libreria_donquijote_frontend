@@ -2,14 +2,46 @@
 .hero {
   margin: 0;
 }
+
 .heroimg {
   height: 525px;
   width: 100%;
+  animation: fadeInScale 1s ease-out 0.3s forwards;
+  opacity: 0;
+  position: absolute; /* Agregar esto */
+  top: 0;
+  left: 0;
+  z-index: 1; /* La imagen en la capa más baja */
 }
+
 .hero_content {
   position: relative;
   height: 525px;
 }
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .eslogan {
   display: flex;
   position: absolute;
@@ -21,10 +53,17 @@
   width: 550px;
   top: 45px;
   right: 100px;
+  animation: fadeIn 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+  z-index: 2; /* Por encima de la imagen */
 }
+
 .eslogan strong {
   color: #2b4c69;
+  animation: fadeIn 0.8s ease-out 0.35s forwards;
+  opacity: 0;
 }
+
 .hero_content button {
   position: absolute;
   flex-wrap: wrap;
@@ -40,26 +79,58 @@
   top: 400px;
   right: 100px;
   background-color: rgb(59 130 246 / 0.8);
+  animation: fadeIn 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 2; /* Por encima de la imagen */
 }
+
 .btn_explorar_evento:hover {
   background-color: rgb(59 130 246 / 1);
   cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
 }
+
 .contact {
   position: absolute;
   display: flex;
   flex-direction: row;
   bottom: 70px;
   left: 230px;
+  animation: fadeIn 0.8s ease-out 0.6s forwards;
+  opacity: 0;
+  transition: transform 0.2s ease;
+  z-index: 2; /* Por encima de la imagen */
 }
+
+.contact:hover {
+  transform: translateX(5px);
+}
+
 .time_hero {
   position: absolute;
   display: flex;
   flex-direction: row;
   bottom: 100px;
   left: 230px;
+  animation: fadeIn 0.8s ease-out 0.7s forwards;
+  opacity: 0;
+  transition: transform 0.2s ease;
+  z-index: 2; /* Por encima de la imagen */
 }
+
+.time_hero:hover {
+  transform: translateX(5px);
+}
+
 .hero_img {
   filter: invert(95%) sepia(0%) saturate(0%) hue-rotate(170deg) brightness(94%)
     contrast(101%);
+  transition: transform 0.3s ease;
+}
+
+.contact:hover .hero_img,
+.time_hero:hover .hero_img {
+  transform: scale(1.15) rotate(5deg);
 }

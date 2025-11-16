@@ -8,6 +8,7 @@ import Blog from "../components/pages/Blog";
 import Contacto from "../components/pages/Contacto";
 import Admin from "../components/pages/Admin";
 import Footer from "../components/layout/Footer";
+import ScrolltoTop from "../ScrolltoTop";
 
 export default function Rutas({
   isOpen,
@@ -16,6 +17,7 @@ export default function Rutas({
 }) {
   return (
     <BrowserRouter>
+      <ScrolltoTop />
       <Header />
 
       <section id="content" className="content">

@@ -1,16 +1,20 @@
 import React, { use } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import don_quijote from "../../../image/don_quijote.jpeg";
 import clock from "../../../image/clock.svg";
 import pin from "../../../image/pin.svg";
 import quote from "../../../image/comma.svg";
 import BookCard from "../components/BookCard";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import CurrentContext from "../../Context/CurrentContext";
 import CardBlog from "../components/CardBlog";
 
 export default function Inicio() {
+  const navigate = useNavigate();
   const { books, recomendaciones = [], loading } = useContext(CurrentContext);
+
   return (
     <div>
       <section className="hero">
@@ -19,7 +23,14 @@ export default function Inicio() {
             Descubre tu proxima <strong>gran historia</strong>
           </h1>
 
-          <button className="btn_explorar_evento"> Explorar Catalogo</button>
+          <button
+            className="btn_explorar_evento"
+            onClick={() => {
+              navigate("/Libros");
+            }}
+          >
+            Explorar Catálogo
+          </button>
           <div className="contact">
             <img className="hero_img" src={pin} />
             <p>Calle 5 de Mayo #1460</p>
@@ -46,7 +57,14 @@ export default function Inicio() {
               <BookCard key={book._id} books={book} />
             ))}
           </div>
-          <button className="btn_recien_llegados">Ver Todo el Catalogo</button>
+          <button
+            className="btn_recien_llegados"
+            onClick={() => {
+              navigate("/Libros");
+            }}
+          >
+            Ver Todo el Catalogo
+          </button>
         </div>
       </section>
 
@@ -73,7 +91,14 @@ export default function Inicio() {
               />
             ))}
           </div>
-          <button className="btn_blog_inicio">Ver Todo el Catalogo</button>
+          <button
+            className="btn_blog_inicio"
+            onClick={() => {
+              navigate("/Blog");
+            }}
+          >
+            Visita nuestra Comunidad
+          </button>
         </div>
       </section>
 
