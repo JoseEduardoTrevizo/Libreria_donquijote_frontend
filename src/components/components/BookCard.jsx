@@ -1,5 +1,4 @@
 import React from "react";
-import assassinsCreedImage from "../../../image/secret-crusade.webp";
 export default function BookCard({ books }) {
   const book = {
     title: books.titulo || "Título Desconocido",
@@ -23,7 +22,7 @@ export default function BookCard({ books }) {
           <h2 className="book-title">{book.title}</h2>
           <p className="book-author">{book.author}</p>
 
-          <p className="price-button">{book.price}</p>
+          <p className="price-button">{"$" + " " + book.price}</p>
         </div>
       </div>
     </div>
