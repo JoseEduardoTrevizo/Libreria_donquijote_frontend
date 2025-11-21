@@ -7,6 +7,7 @@ import Eventos from "../components/pages/Eventos";
 import Blog from "../components/pages/Blog";
 import Contacto from "../components/pages/Contacto";
 import AdminLogin from "../components/pages/AdminLogin";
+import AdminConfig from "../components/pages/AdminConfig";
 import Footer from "../components/layout/Footer";
 import ScrolltoTop from "../ScrolltoTop";
 // Layout público
@@ -66,8 +67,8 @@ export default function Rutas({
           {/* Subrutas de admin */}
           {/* 
           <Route path="/Admin/usuarios" element={<AdminUsuarios />} />
-          <Route path="/Admin/configuracion" element={<AdminConfiguracion />} />
           */}
+          <Route path="/Admin/configuracion" element={<AdminConfig />} />
         </Route>
       </Routes>
     </BrowserRouter>
