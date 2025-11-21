@@ -1,14 +1,35 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
 import Header from "../components/layout/Header";
 import Inicio from "../components/pages/Inicio";
 import Libros from "../components/pages/Libros";
 import Eventos from "../components/pages/Eventos";
 import Blog from "../components/pages/Blog";
 import Contacto from "../components/pages/Contacto";
-import Admin from "../components/pages/Admin";
+import AdminLogin from "../components/pages/AdminLogin";
 import Footer from "../components/layout/Footer";
 import ScrolltoTop from "../ScrolltoTop";
+// Layout público
+function PublicLayout() {
+  return (
+    <>
+      <Header />
+      <section id="content" className="content">
+        <Outlet />
+      </section>
+      <Footer />
+    </>
+  );
+}
+
+// Layout admin
+function AdminLayout() {
+  return (
+    <section id="admin-content" className="admin-content">
+      <Outlet />
+    </section>
+  );
+}
 
 export default function Rutas({
   isOpen,
@@ -18,10 +39,10 @@ export default function Rutas({
   return (
     <BrowserRouter>
       <ScrolltoTop />
-      <Header />
 
-      <section id="content" className="content">
-        <Routes>
+      <Routes>
+        {/* Rutas públicas */}
+        <Route element={<PublicLayout />}>
           <Route path="/" element={<Inicio />} />
           <Route path="/Inicio" element={<Inicio />} />
           <Route path="/Libros" element={<Libros />} />
@@ -37,11 +58,18 @@ export default function Rutas({
             }
           />
           <Route path="/Contacto" element={<Contacto />} />
-          <Route path="/Admin" element={<Admin />} />
-        </Routes>
-      </section>
+        </Route>
 
-      <Footer />
+        {/* Rutas de admin */}
+        <Route element={<AdminLayout />}>
+          <Route path="/Admin-login" element={<AdminLogin />} />
+          {/* Subrutas de admin */}
+          {/* 
+          <Route path="/Admin/usuarios" element={<AdminUsuarios />} />
+          <Route path="/Admin/configuracion" element={<AdminConfiguracion />} />
+          */}
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }
