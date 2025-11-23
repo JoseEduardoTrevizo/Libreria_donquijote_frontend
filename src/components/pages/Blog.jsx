@@ -28,7 +28,7 @@ export default function Blog({
         libros.
       </h3>
 
-      <div className="cardContainer">
+      <div className="cardContainerBlog">
         {/* Estado de carga */}
         {loading && (
           <div className="loading-container">

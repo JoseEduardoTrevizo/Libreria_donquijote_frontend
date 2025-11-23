@@ -11,14 +11,18 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="admin-login-container">
-      <div className="admin-login-card">
-        <div className="admin-login-header">
-          <img src={Book} alt="Admin Login" className="admin-login-icon" />
+    <div className="admin-login-containerConfig">
+      <div className="admin-login-cardConfig">
+        <div className="admin-login-headerConfig">
+          <img
+            src={Book}
+            alt="Admin Login"
+            className="admin-login-iconConfig"
+          />
           <h1>Panel de Administración</h1>
         </div>
 
-        <div className="form-group">
+        <div className="form-groupConfig">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -29,7 +33,7 @@ export default function AdminLogin() {
           />
         </div>
 
-        <div className="form-group">
+        <div className="form-groupConfig">
           <label htmlFor="password">Contraseña</label>
           <input
             type="password"
@@ -40,7 +44,7 @@ export default function AdminLogin() {
           />
         </div>
 
-        <button onClick={handleSubmit} className="login-button">
+        <button onClick={handleSubmit} className="login-buttonConfig">
           Iniciar Sesión
         </button>
       </div>

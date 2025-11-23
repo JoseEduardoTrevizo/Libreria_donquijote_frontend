@@ -120,7 +120,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 12px;
-  padding-top: 16px;
+  padding-top: 5px;
   border-top: 1px solid #e5e7eb;
 }
 /* Info de usuario - Grid con 2 columnas */

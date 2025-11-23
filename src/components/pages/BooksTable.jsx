@@ -38,12 +38,12 @@ export default function BooksTable() {
   };
 
   return (
-    <div className="books-container">
+    <div className="books-containerConfig">
       {/* Search Bar and Add Button */}
-      <div className="top-bar">
-        <div className="search-container">
+      <div className="top-barConfig">
+        <div className="search-containerConfig">
           <svg
-            className="search-icon"
+            className="search-iconConfig"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"
@@ -57,7 +57,7 @@ export default function BooksTable() {
           </svg>
           <input
             type="text"
-            className="search-input"
+            className="search-inputConfig"
             placeholder="Buscar libros por título, autor o categoría..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
@@ -66,7 +66,7 @@ export default function BooksTable() {
         <div>
           <p className="existencia"> Existencia {books.length}</p>
         </div>
-        <button className="add-button" onClick={handleAddBook}>
+        <button className="add-buttonConfig" onClick={handleAddBook}>
           <svg
             className="plus-icon"
             xmlns="http://www.w3.org/2000/svg"
@@ -85,8 +85,8 @@ export default function BooksTable() {
       </div>
 
       {/* Table */}
-      <div className="table-wrapper">
-        <table className="books-table">
+      <div className="table-wrapperConfig">
+        <table className="books-tableConfig">
           <thead>
             <tr>
               <th>Imagen</th>
@@ -101,18 +101,18 @@ export default function BooksTable() {
             {books.map((book) => (
               <tr key={book.id}>
                 <td>
-                  <div className="book-image"></div>
+                  <div className="book-imageConfig"></div>
                 </td>
-                <td className="book-title">{book.title}</td>
-                <td className="book-author">{book.author}</td>
+                <td className="book-titleConfig">{book.title}</td>
+                <td className="book-authorConfig">{book.author}</td>
                 <td>
-                  <span className="category-badge">{book.category}</span>
+                  <span className="category-badgeConfig">{book.category}</span>
                 </td>
-                <td className="book-price">${book.price}</td>
+                <td className="book-priceConfig">${book.price}</td>
                 <td>
-                  <div className="actions-container">
+                  <div className="actions-containerConfig">
                     <button
-                      className="action-button edit-button"
+                      className="action-buttonConfig edit-buttonConfig"
                       onClick={() => handleEdit(book.id)}
                     >
                       <svg
@@ -129,7 +129,7 @@ export default function BooksTable() {
                       </svg>
                     </button>
                     <button
-                      className="action-button delete-button"
+                      className="action-buttonConfig delete-buttonConfig"
                       onClick={() => handleDelete(book.id)}
                     >
                       <svg

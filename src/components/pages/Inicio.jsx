@@ -53,7 +53,7 @@ export default function Inicio() {
 
         <div className="container_card">
           <div className="cardContainer_books">
-            {books.slice(0, 4).map((book) => (
+            {books.slice(0, 5).map((book) => (
               <BookCard key={book._id} books={book} />
             ))}
           </div>
@@ -77,8 +77,8 @@ export default function Inicio() {
         </div>
 
         <div className="container_card">
-          <div className="cardContainer_events">
-            {recomendaciones.slice(0, 4).map((rec) => (
+          <div className="cardContainer_blog">
+            {recomendaciones.slice(0, 3).map((rec) => (
               <CardBlog
                 key={rec._id}
                 titulo={rec.titulo}

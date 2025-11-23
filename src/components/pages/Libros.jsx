@@ -68,7 +68,6 @@ export default function Libros() {
   return (
     <div className="catalogo">
       <h2 className="titel_books">Catálogo de Libros</h2>
-      <p className="subtitle_books">Explora nuestra coleccion de libros.</p>
 
       <div className="container_search">
         <div className="container_avanzado">

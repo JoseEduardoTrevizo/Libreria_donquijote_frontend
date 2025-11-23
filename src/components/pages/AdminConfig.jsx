@@ -12,11 +12,11 @@ export default function AdminConfig() {
   return (
     <div className="admin-panel">
       {/* Header */}
-      <header className="header">
-        <div className="header-content">
-          <div className="header-left">
+      <header className="headerConfig">
+        <div className="header-contentConfig">
+          <div className="header-leftConfig">
             <svg
-              className="header-icon"
+              className="header-iconConfig"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"
@@ -29,11 +29,11 @@ export default function AdminConfig() {
               <line x1="8" y1="21" x2="16" y2="21"></line>
               <line x1="12" y1="17" x2="12" y2="21"></line>
             </svg>
-            <h1 className="header-title">Panel de Administración</h1>
+            <h1 className="header-titleConfig">Panel de Administración</h1>
           </div>
-          <button className="logout-button" onClick={handleLogout}>
+          <button className="logout-buttonConfig" onClick={handleLogout}>
             <svg
-              className="logout-icon"
+              className="logout-iconConfig"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"
@@ -52,13 +52,13 @@ export default function AdminConfig() {
       </header>
 
       {/* Main Content */}
-      <main className="main-content">
-        <h2 className="welcome-title">Bienvenido</h2>
+      <main className="main-contentConfig">
+        <h2 className="welcome-titleConfig">Bienvenido</h2>
 
         {/* Tabs */}
-        <div className="tabs-container">
+        <div className="tabs-containerConfig">
           <button
-            className={`tab-button ${
+            className={`tab-buttonConfig ${
               activeTab === "libros" ? "active" : "inactive"
             }`}
             onClick={() => setActiveTab("libros")}
@@ -66,7 +66,7 @@ export default function AdminConfig() {
             Libros
           </button>
           <button
-            className={`tab-button ${
+            className={`tab-buttonConfig ${
               activeTab === "eventos" ? "active" : "inactive"
             }`}
             onClick={() => setActiveTab("eventos")}
@@ -74,7 +74,7 @@ export default function AdminConfig() {
             Eventos
           </button>
           <button
-            className={`tab-button ${
+            className={`tab-buttonConfig ${
               activeTab === "blog" ? "active" : "inactive"
             }`}
             onClick={() => setActiveTab("blog")}

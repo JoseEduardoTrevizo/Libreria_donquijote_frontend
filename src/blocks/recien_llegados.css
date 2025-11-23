@@ -45,7 +45,7 @@
   cursor: pointer;
 }
 .cardContainer_books,
-.cardContainer_events {
+.cardContainer_blog {
   width: 100%;
   margin-top: 15px;
   height: auto;

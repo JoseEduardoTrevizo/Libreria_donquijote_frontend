@@ -1,4 +1,4 @@
-.admin-login-container {
+.admin-login-containerConfig {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -7,7 +7,7 @@
   padding: 20px;
 }
 
-.admin-login-card {
+.admin-login-cardConfig {
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -16,13 +16,13 @@
   max-width: 480px;
 }
 
-.admin-login-header {
+.admin-login-headerConfig {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
 }
-.admin-login-icon {
+.admin-login-iconConfig {
   width: 36px;
   height: 36px;
   margin-bottom: 15px;
@@ -30,18 +30,18 @@
     brightness(94%) contrast(91%);
 }
 
-.admin-login-header h1 {
+.admin-login-headerConfig h1 {
   font-size: 24px;
   font-weight: 600;
   color: #3b5773;
   margin: 0;
 }
 
-.form-group {
+.form-groupConfig {
   margin-bottom: 25px;
 }
 
-.form-group label {
+.form-groupConfig label {
   display: block;
   font-size: 14px;
   font-weight: 500;
@@ -49,7 +49,7 @@
   margin-bottom: 8px;
 }
 
-.form-group input {
+.form-groupConfig input {
   width: 100%;
   padding: 12px;
   font-size: 14px;
@@ -60,11 +60,11 @@
   box-sizing: border-box;
 }
 
-.form-group input:focus {
+.form-groupConfig input:focus {
   border-color: #3b5773;
 }
 
-.login-button {
+.login-buttonConfig {
   width: 100%;
   padding: 14px;
   background-color: #3b5773;
@@ -78,6 +78,6 @@
   margin-bottom: 20px;
 }
 
-.login-button:hover {
+.login-buttonConfig:hover {
   background-color: #2d4459;
 }
