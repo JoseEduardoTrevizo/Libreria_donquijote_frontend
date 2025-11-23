@@ -1,6 +1,8 @@
 // AdminPanel.jsx
 import React, { useState } from "react";
 import BooksTable from "./BooksTable";
+import EventsTable from "./EventsTable";
+import BlogTable from "./BlogTable";
 
 export default function AdminConfig() {
   const [activeTab, setActiveTab] = useState("libros");
@@ -83,7 +85,10 @@ export default function AdminConfig() {
           </button>
         </div>
       </main>
-      <BooksTable />
+      {/* Renderizado condicional de tablas */}
+      {activeTab === "libros" && <BooksTable />}
+      {activeTab === "eventos" && <EventsTable />}
+      {activeTab === "blog" && <BlogTable />}
     </div>
   );
 }

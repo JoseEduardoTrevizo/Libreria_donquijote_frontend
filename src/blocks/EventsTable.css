@@ -1,0 +1,114 @@
+/* BooksTable.css */
+
+.books-containerConfig {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Top Bar */
+.top-barConfig-Events {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+/* Add Button */
+.addEvents-buttonConfig {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #1e3a8a;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.add-buttonConfig:hover {
+  background-color: #1e40af;
+}
+
+.plus-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Table */
+.table-wrapperConfig {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.events-tableConfig {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.events-tableConfig thead {
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.events-tableConfig th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.events-tableConfig tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s;
+}
+
+.events-tableConfig tbody tr:last-child {
+  border-bottom: none;
+}
+
+.events-tableConfig tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.events-tableConfig td {
+  padding: 1.25rem 1.5rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+/* Book Title */
+.events-titleConfig {
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+/* Book Author */
+.events-authorConfig {
+  color: #6b7280;
+}
+
+/* Category Badge */
+.category-badgeConfig {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  color: #374151;
+  background-color: #f3f4f6;
+  border-radius: 0.375rem;
+}
+
+/* Book Price */
+.events-priceConfig {
+  font-weight: 600;
+  color: #111827;
+}

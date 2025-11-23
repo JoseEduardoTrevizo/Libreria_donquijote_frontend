@@ -7,6 +7,8 @@ export default function BooksTable() {
       id: 1,
       image: null,
       title: "Don Quijote de La Mancha",
+      descripcion:
+        "Una novela clásica sobre las aventuras de un caballero andante, escrita por Miguel de Cervantes Saavedra en el siglo XVII cuando explora temas de realidad y ficción, idealismo y pragmatismo a través de las peripecias de Don Quijote y su fiel escudero Sancho Panza en la España rural de la época, ofreciendo una profunda reflexión sobre la naturaleza humana y la sociedad. Una novela clásica sobre las aventuras de un caballero andante, escrita por Miguel de Cervantes Saavedra en el siglo XVII cuando explora temas de realidad y ficción, idealismo y pragmatismo a través de las peripecias de Don Quijote y su fiel escudero Sancho Panza en la España rural de la época, ofreciendo una profunda reflexión sobre la naturaleza humana y la sociedad.",
       author: "Miguel de Cervantes",
       category: "Clásicos",
       price: 25.99,
@@ -15,6 +17,108 @@ export default function BooksTable() {
       id: 2,
       image: null,
       title: "Cien años de soledad",
+      descripcion:
+        "Una obra maestra de la literatura latinoamericana que narra la historia de la familia Buendía.",
+      author: "Gabriel García Márquez",
+      category: "Literatura Latinoamericana",
+      price: 22.5,
+    },
+    {
+      id: 3,
+      image: null,
+      title: "Cien años de soledad",
+      descripcion:
+        "Una obra maestra de la literatura latinoamericana que narra la historia de la familia Buendía.",
+      author: "Gabriel García Márquez",
+      category: "Literatura Latinoamericana",
+      price: 22.5,
+    },
+    {
+      id: 4,
+      image: null,
+      title: "Cien años de soledad",
+      descripcion:
+        "Una obra maestra de la literatura latinoamericana que narra la historia de la familia Buendía.",
+      author: "Gabriel García Márquez",
+      category: "Literatura Latinoamericana",
+      price: 22.5,
+    },
+    {
+      id: 5,
+      image: null,
+      title: "Cien años de soledad",
+      descripcion:
+        "Una obra maestra de la literatura latinoamericana que narra la historia de la familia Buendía.",
+      author: "Gabriel García Márquez",
+      category: "Literatura Latinoamericana",
+      price: 22.5,
+    },
+    {
+      id: 6,
+      image: null,
+      title: "Cien años de soledad",
+      descripcion:
+        "Una obra maestra de la literatura latinoamericana que narra la historia de la familia Buendía.",
+      author: "Gabriel García Márquez",
+      category: "Literatura Latinoamericana",
+      price: 22.5,
+    },
+    {
+      id: 7,
+      image: null,
+      title: "Don Quijote de La Mancha",
+      descripcion:
+        "Una novela clásica sobre las aventuras de un caballero andante, escrita por Miguel de Cervantes Saavedra en el siglo XVII cuando explora temas de realidad y ficción, idealismo y pragmatismo a través de las peripecias de Don Quijote y su fiel escudero Sancho Panza en la España rural de la época, ofreciendo una profunda reflexión sobre la naturaleza humana y la sociedad. Una novela clásica sobre las aventuras de un caballero andante, escrita por Miguel de Cervantes Saavedra en el siglo XVII cuando explora temas de realidad y ficción, idealismo y pragmatismo a través de las peripecias de Don Quijote y su fiel escudero Sancho Panza en la España rural de la época, ofreciendo una profunda reflexión sobre la naturaleza humana y la sociedad.",
+      author: "Miguel de Cervantes",
+      category: "Clásicos",
+      price: 25.99,
+    },
+    {
+      id: 8,
+      image: null,
+      title: "Cien años de soledad",
+      descripcion:
+        "Una obra maestra de la literatura latinoamericana que narra la historia de la familia Buendía.",
+      author: "Gabriel García Márquez",
+      category: "Literatura Latinoamericana",
+      price: 22.5,
+    },
+    {
+      id: 9,
+      image: null,
+      title: "Cien años de soledad",
+      descripcion:
+        "Una obra maestra de la literatura latinoamericana que narra la historia de la familia Buendía.",
+      author: "Gabriel García Márquez",
+      category: "Literatura Latinoamericana",
+      price: 22.5,
+    },
+    {
+      id: 10,
+      image: null,
+      title: "Cien años de soledad",
+      descripcion:
+        "Una obra maestra de la literatura latinoamericana que narra la historia de la familia Buendía.",
+      author: "Gabriel García Márquez",
+      category: "Literatura Latinoamericana",
+      price: 22.5,
+    },
+    {
+      id: 11,
+      image: null,
+      title: "Cien años de soledad",
+      descripcion:
+        "Una obra maestra de la literatura latinoamericana que narra la historia de la familia Buendía.",
+      author: "Gabriel García Márquez",
+      category: "Literatura Latinoamericana",
+      price: 22.5,
+    },
+    {
+      id: 12,
+      image: null,
+      title: "Cien años de soledad",
+      descripcion:
+        "Una obra maestra de la literatura latinoamericana que narra la historia de la familia Buendía.",
       author: "Gabriel García Márquez",
       category: "Literatura Latinoamericana",
       price: 22.5,
@@ -92,6 +196,7 @@ export default function BooksTable() {
               <th>Imagen</th>
               <th>Título</th>
               <th>Autor</th>
+              <th>Descripcion</th>
               <th>Categoría</th>
               <th>Precio</th>
               <th>Acciones</th>
@@ -105,6 +210,7 @@ export default function BooksTable() {
                 </td>
                 <td className="book-titleConfig">{book.title}</td>
                 <td className="book-authorConfig">{book.author}</td>
+                <td className="book-descriptionConfig">{book.descripcion}</td>
                 <td>
                   <span className="category-badgeConfig">{book.category}</span>
                 </td>
