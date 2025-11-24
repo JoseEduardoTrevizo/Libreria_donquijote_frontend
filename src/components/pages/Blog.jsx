@@ -1,6 +1,6 @@
 import React from "react";
 import heroBlog from "../../../image/blog_hero.png";
-import Popup from "./popup";
+import Popup from "./Popup";
 import CardBlog from "../components/CardBlog";
 import CurrentContext from "../../Context/CurrentContext";
 
