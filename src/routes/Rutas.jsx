@@ -44,7 +44,7 @@ export default function Rutas({
       <Routes>
         {/* Rutas públicas */}
         <Route element={<PublicLayout />}>
-          <Route path="/" element={<Inicio />} />
+          <Route path="/Libreria_donquijote_frontend" element={<Inicio />} />
           <Route path="/Inicio" element={<Inicio />} />
           <Route path="/Libros" element={<Libros />} />
           <Route path="/Eventos" element={<Eventos />} />
